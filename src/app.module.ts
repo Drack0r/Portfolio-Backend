@@ -9,6 +9,7 @@ import { ServicesModule } from './services/services.module';
 import { ProjectsModule } from './projects/projects.module';
 import { NavlinksModule } from './navlinks/navlinks.module';
 import { PortfolioController } from './portfolio/portfolio.controller';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { PortfolioController } from './portfolio/portfolio.controller';
     ServicesModule,
     ProjectsModule,
     NavlinksModule,
+    AuthModule,
   ],
   controllers: [AppController, PortfolioController],
   providers: [AppService],
