@@ -15,7 +15,8 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env',
+      envFilePath:
+        process.env.NODE_ENV === 'production' ? '.env.prod' : '.env.dev',
     }),
     MongooseModule.forRootAsync({
       inject: [ConfigService],
