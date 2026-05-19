@@ -10,7 +10,7 @@ export class NavlinksService {
   ) {}
 
   async getNavLinks(): Promise<NavLinkDocument[]> {
-    return this.navlinkModel.find();
+    return this.navlinkModel.find().sort({ order: 1 });
   }
 
   async getNavLinkById(id: string): Promise<NavLinkDocument> {
